@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Customize_Event_Plan_Project_Services.Models.Deco_Details>
+
+@{
+    ViewBag.Title = "Deco";
+}
+
+<h2>Deco</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Deco_Item)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deco_Item)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Show Details", "Deco_Select", new { id=item.Deco_Id }) |
+            
+        </td>
+    </tr>
+}
+
+</table>

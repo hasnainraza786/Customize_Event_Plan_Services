@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Event_plan_ProjectModelStoreContainer" CdmEntityContainer="Event_plan_ProjectEntities">
+    <EntitySetMapping Name="Venue_Detail">
+      <EntityTypeMapping TypeName="Event_plan_ProjectModel.Venue_Detail">
+        <MappingFragment StoreEntitySet="Venue_Detail">
+          <ScalarProperty Name="Venue_Select" ColumnName="Venue_Select" />
+          <ScalarProperty Name="Venue_Price" ColumnName="Venue_Price" />
+          <ScalarProperty Name="Venue_Type" ColumnName="Venue_Type" />
+          <ScalarProperty Name="Venue_Address" ColumnName="Venue_Address" />
+          <ScalarProperty Name="Venue_Capacity" ColumnName="Venue_Capacity" />
+          <ScalarProperty Name="Venue_Name" ColumnName="Venue_Name" />
+          <ScalarProperty Name="Venue_Id" ColumnName="Venue_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu_Detail">
+      <EntityTypeMapping TypeName="Event_plan_ProjectModel.Menu_Detail">
+        <MappingFragment StoreEntitySet="Menu_Detail">
+          <ScalarProperty Name="Menu_Select" ColumnName="Menu_Select" />
+          <ScalarProperty Name="Menu_Type" ColumnName="Menu_Type" />
+          <ScalarProperty Name="Menu_Price" ColumnName="Menu_Price" />
+          <ScalarProperty Name="Menu_Info" ColumnName="Menu_Info" />
+          <ScalarProperty Name="Menu_Name" ColumnName="Menu_Name" />
+          <ScalarProperty Name="Menu_Id" ColumnName="Menu_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deco_Details">
+      <EntityTypeMapping TypeName="Event_plan_ProjectModel.Deco_Details">
+        <MappingFragment StoreEntitySet="Deco_Details">
+          <ScalarProperty Name="Deco_Quantity" ColumnName="Deco_Quantity" />
+          <ScalarProperty Name="Deco_Select" ColumnName="Deco_Select" />
+          <ScalarProperty Name="Deco_Price" ColumnName="Deco_Price" />
+          <ScalarProperty Name="Deco_Item" ColumnName="Deco_Item" />
+          <ScalarProperty Name="Deco_Id" ColumnName="Deco_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Details">
+      <EntityTypeMapping TypeName="Event_plan_ProjectModel.Order_Details">
+        <MappingFragment StoreEntitySet="Order_Details">
+          <ScalarProperty Name="People" ColumnName="People" />
+          <ScalarProperty Name="Deco_Item" ColumnName="Deco_Item" />
+          <ScalarProperty Name="Menu_Name" ColumnName="Menu_Name" />
+          <ScalarProperty Name="Venue_Name" ColumnName="Venue_Name" />
+          <ScalarProperty Name="Order_Id" ColumnName="Order_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_Info">
+      <EntityTypeMapping TypeName="Event_plan_ProjectModel.Customer_Info">
+        <MappingFragment StoreEntitySet="Customer_Info">
+          <ScalarProperty Name="Customer_Email" ColumnName="Customer_Email" />
+          <ScalarProperty Name="Customer_PhoneNumber" ColumnName="Customer_PhoneNumber" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="Customer_Id" ColumnName="Customer_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_Query">
+      <EntityTypeMapping TypeName="Event_plan_ProjectModel.Customer_Query">
+        <MappingFragment StoreEntitySet="Customer_Query">
+          <ScalarProperty Name="Customer_Query1" ColumnName="Customer_Query" />
+          <ScalarProperty Name="Customer_Email" ColumnName="Customer_Email" />
+          <ScalarProperty Name="Customer_PhoneNumber" ColumnName="Customer_PhoneNumber" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="Query_Id" ColumnName="Query_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

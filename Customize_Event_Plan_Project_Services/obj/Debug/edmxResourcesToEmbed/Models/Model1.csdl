@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Event_plan_ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Event_plan_ProjectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Venue_Detail" EntityType="Event_plan_ProjectModel.Venue_Detail" />
+    <EntitySet Name="Menu_Detail" EntityType="Event_plan_ProjectModel.Menu_Detail" />
+    <EntitySet Name="Deco_Details" EntityType="Event_plan_ProjectModel.Deco_Details" />
+    <EntitySet Name="Order_Details" EntityType="Event_plan_ProjectModel.Order_Details" />
+    <EntitySet Name="Customer_Info" EntityType="Event_plan_ProjectModel.Customer_Info" />
+    <EntitySet Name="Customer_Query" EntityType="Event_plan_ProjectModel.Customer_Query" />
+  </EntityContainer>
+  <EntityType Name="Venue_Detail">
+    <Key>
+      <PropertyRef Name="Venue_Id" />
+    </Key>
+    <Property Name="Venue_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Venue_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Venue_Capacity" Type="Int32" />
+    <Property Name="Venue_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Venue_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Venue_Price" Type="Int32" />
+    <Property Name="Venue_Select" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Menu_Detail">
+    <Key>
+      <PropertyRef Name="Menu_Id" />
+    </Key>
+    <Property Name="Menu_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Menu_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Menu_Info" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Menu_Price" Type="Int32" />
+    <Property Name="Menu_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Menu_Select" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Deco_Details">
+    <Key>
+      <PropertyRef Name="Deco_Id" />
+    </Key>
+    <Property Name="Deco_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Deco_Item" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Deco_Price" Type="Int32" />
+    <Property Name="Deco_Select" Type="Boolean" />
+    <Property Name="Deco_Quantity" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Order_Details">
+    <Key>
+      <PropertyRef Name="Order_Id" />
+    </Key>
+    <Property Name="Order_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Venue_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Menu_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Deco_Item" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="People" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Customer_Info">
+    <Key>
+      <PropertyRef Name="Customer_Id" />
+    </Key>
+    <Property Name="Customer_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_PhoneNumber" Type="Int32" />
+    <Property Name="Customer_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Customer_Query">
+    <Key>
+      <PropertyRef Name="Query_Id" />
+    </Key>
+    <Property Name="Query_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_PhoneNumber" Type="Int32" />
+    <Property Name="Customer_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Query1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

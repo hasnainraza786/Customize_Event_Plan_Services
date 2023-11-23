@@ -1,0 +1,40 @@
+﻿@model Customize_Event_Plan_Project_Services.ViewModel.MultipleTable
+
+@{
+    ViewBag.Title = "multidata";
+}
+
+<h2>SUMMARY OF YOUR ORDER</h2>
+
+<br />
+<br />
+
+<h2>VENUE DETAILS</h2>
+<div>
+    @{ WebGrid obj1 = new WebGrid(source: Model.Venue_Detailses, canPage: true, rowsPerPage: 10);}
+    @obj1.GetHtml();
+</div>
+
+<br />
+<br />
+
+<h2>MENU DETAILS</h2>
+<div>
+    @{ WebGrid obj2 = new WebGrid(source: Model.Menu_Detailses, canPage: true, rowsPerPage: 10);}
+    @obj2.GetHtml();
+</div>
+
+<br />
+<br />
+
+<h2>DECO DETAILS</h2>
+<div>
+    @{ WebGrid obj3 = new WebGrid(source: Model.Deco_Detailses, canPage: true, rowsPerPage: 10);}
+    @obj3.GetHtml();
+</div>
+
+@using (Html.BeginForm("Confirm", "Services"))
+{
+    <button type="submit" class="btn btn-btn-default">Next</button>
+}
+

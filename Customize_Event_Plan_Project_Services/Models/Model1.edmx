@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Event_plan_ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customer_Info">
+          <Key>
+            <PropertyRef Name="Customer_Id" />
+          </Key>
+          <Property Name="Customer_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Customer_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Customer_PhoneNumber" Type="int" />
+          <Property Name="Customer_Email" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Customer_Query">
+          <Key>
+            <PropertyRef Name="Query_Id" />
+          </Key>
+          <Property Name="Query_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Customer_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Customer_PhoneNumber" Type="int" />
+          <Property Name="Customer_Email" Type="varchar" MaxLength="50" />
+          <Property Name="Customer_Query" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Deco_Details">
+          <Key>
+            <PropertyRef Name="Deco_Id" />
+          </Key>
+          <Property Name="Deco_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Deco_Item" Type="varchar" MaxLength="50" />
+          <Property Name="Deco_Price" Type="int" />
+          <Property Name="Deco_Select" Type="bit" />
+          <Property Name="Deco_Quantity" Type="int" />
+        </EntityType>
+        <EntityType Name="Menu_Detail">
+          <Key>
+            <PropertyRef Name="Menu_Id" />
+          </Key>
+          <Property Name="Menu_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Menu_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Menu_Info" Type="varchar" MaxLength="50" />
+          <Property Name="Menu_Price" Type="int" />
+          <Property Name="Menu_Type" Type="varchar" MaxLength="50" />
+          <Property Name="Menu_Select" Type="bit" />
+        </EntityType>
+        <EntityType Name="Order_Details">
+          <Key>
+            <PropertyRef Name="Order_Id" />
+          </Key>
+          <Property Name="Order_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Venue_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Menu_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Deco_Item" Type="varchar" MaxLength="50" />
+          <Property Name="People" Type="int" />
+        </EntityType>
+        <EntityType Name="Venue_Detail">
+          <Key>
+            <PropertyRef Name="Venue_Id" />
+          </Key>
+          <Property Name="Venue_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Venue_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Venue_Capacity" Type="int" />
+          <Property Name="Venue_Address" Type="varchar" MaxLength="100" />
+          <Property Name="Venue_Type" Type="varchar" MaxLength="20" />
+          <Property Name="Venue_Price" Type="int" />
+          <Property Name="Venue_Select" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="Event_plan_ProjectModelStoreContainer">
+          <EntitySet Name="Customer_Info" EntityType="Self.Customer_Info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer_Query" EntityType="Self.Customer_Query" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Deco_Details" EntityType="Self.Deco_Details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Menu_Detail" EntityType="Self.Menu_Detail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order_Details" EntityType="Self.Order_Details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Venue_Detail" EntityType="Self.Venue_Detail" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Event_plan_ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Event_plan_ProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Venue_Detail" EntityType="Event_plan_ProjectModel.Venue_Detail" />
+          <EntitySet Name="Menu_Detail" EntityType="Event_plan_ProjectModel.Menu_Detail" />
+          <EntitySet Name="Deco_Details" EntityType="Event_plan_ProjectModel.Deco_Details" />
+          <EntitySet Name="Order_Details" EntityType="Event_plan_ProjectModel.Order_Details" />
+          <EntitySet Name="Customer_Info" EntityType="Event_plan_ProjectModel.Customer_Info" />
+          <EntitySet Name="Customer_Query" EntityType="Event_plan_ProjectModel.Customer_Query" />
+        </EntityContainer>
+        <EntityType Name="Venue_Detail">
+          <Key>
+            <PropertyRef Name="Venue_Id" />
+          </Key>
+          <Property Name="Venue_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Venue_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Venue_Capacity" Type="Int32" />
+          <Property Name="Venue_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Venue_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Venue_Price" Type="Int32" />
+          <Property Name="Venue_Select" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Menu_Detail">
+          <Key>
+            <PropertyRef Name="Menu_Id" />
+          </Key>
+          <Property Name="Menu_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Menu_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Menu_Info" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Menu_Price" Type="Int32" />
+          <Property Name="Menu_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Menu_Select" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Deco_Details">
+          <Key>
+            <PropertyRef Name="Deco_Id" />
+          </Key>
+          <Property Name="Deco_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Deco_Item" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Deco_Price" Type="Int32" />
+          <Property Name="Deco_Select" Type="Boolean" />
+          <Property Name="Deco_Quantity" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Order_Details">
+          <Key>
+            <PropertyRef Name="Order_Id" />
+          </Key>
+          <Property Name="Order_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Venue_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Menu_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Deco_Item" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="People" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Customer_Info">
+          <Key>
+            <PropertyRef Name="Customer_Id" />
+          </Key>
+          <Property Name="Customer_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_PhoneNumber" Type="Int32" />
+          <Property Name="Customer_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Customer_Query">
+          <Key>
+            <PropertyRef Name="Query_Id" />
+          </Key>
+          <Property Name="Query_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_PhoneNumber" Type="Int32" />
+          <Property Name="Customer_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_Query1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Event_plan_ProjectModelStoreContainer" CdmEntityContainer="Event_plan_ProjectEntities">
+          <EntitySetMapping Name="Venue_Detail">
+            <EntityTypeMapping TypeName="Event_plan_ProjectModel.Venue_Detail">
+              <MappingFragment StoreEntitySet="Venue_Detail">
+                <ScalarProperty Name="Venue_Select" ColumnName="Venue_Select" />
+                <ScalarProperty Name="Venue_Price" ColumnName="Venue_Price" />
+                <ScalarProperty Name="Venue_Type" ColumnName="Venue_Type" />
+                <ScalarProperty Name="Venue_Address" ColumnName="Venue_Address" />
+                <ScalarProperty Name="Venue_Capacity" ColumnName="Venue_Capacity" />
+                <ScalarProperty Name="Venue_Name" ColumnName="Venue_Name" />
+                <ScalarProperty Name="Venue_Id" ColumnName="Venue_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Menu_Detail">
+            <EntityTypeMapping TypeName="Event_plan_ProjectModel.Menu_Detail">
+              <MappingFragment StoreEntitySet="Menu_Detail">
+                <ScalarProperty Name="Menu_Select" ColumnName="Menu_Select" />
+                <ScalarProperty Name="Menu_Type" ColumnName="Menu_Type" />
+                <ScalarProperty Name="Menu_Price" ColumnName="Menu_Price" />
+                <ScalarProperty Name="Menu_Info" ColumnName="Menu_Info" />
+                <ScalarProperty Name="Menu_Name" ColumnName="Menu_Name" />
+                <ScalarProperty Name="Menu_Id" ColumnName="Menu_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Deco_Details">
+            <EntityTypeMapping TypeName="Event_plan_ProjectModel.Deco_Details">
+              <MappingFragment StoreEntitySet="Deco_Details">
+                <ScalarProperty Name="Deco_Quantity" ColumnName="Deco_Quantity" />
+                <ScalarProperty Name="Deco_Select" ColumnName="Deco_Select" />
+                <ScalarProperty Name="Deco_Price" ColumnName="Deco_Price" />
+                <ScalarProperty Name="Deco_Item" ColumnName="Deco_Item" />
+                <ScalarProperty Name="Deco_Id" ColumnName="Deco_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order_Details">
+            <EntityTypeMapping TypeName="Event_plan_ProjectModel.Order_Details">
+              <MappingFragment StoreEntitySet="Order_Details">
+                <ScalarProperty Name="People" ColumnName="People" />
+                <ScalarProperty Name="Deco_Item" ColumnName="Deco_Item" />
+                <ScalarProperty Name="Menu_Name" ColumnName="Menu_Name" />
+                <ScalarProperty Name="Venue_Name" ColumnName="Venue_Name" />
+                <ScalarProperty Name="Order_Id" ColumnName="Order_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer_Info">
+            <EntityTypeMapping TypeName="Event_plan_ProjectModel.Customer_Info">
+              <MappingFragment StoreEntitySet="Customer_Info">
+                <ScalarProperty Name="Customer_Email" ColumnName="Customer_Email" />
+                <ScalarProperty Name="Customer_PhoneNumber" ColumnName="Customer_PhoneNumber" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="Customer_Id" ColumnName="Customer_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer_Query">
+            <EntityTypeMapping TypeName="Event_plan_ProjectModel.Customer_Query">
+              <MappingFragment StoreEntitySet="Customer_Query">
+                <ScalarProperty Name="Customer_Query1" ColumnName="Customer_Query" />
+                <ScalarProperty Name="Customer_Email" ColumnName="Customer_Email" />
+                <ScalarProperty Name="Customer_PhoneNumber" ColumnName="Customer_PhoneNumber" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="Query_Id" ColumnName="Query_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Event_plan_ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer_Info">
+    <Key>
+      <PropertyRef Name="Customer_Id" />
+    </Key>
+    <Property Name="Customer_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Customer_PhoneNumber" Type="int" />
+    <Property Name="Customer_Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Customer_Query">
+    <Key>
+      <PropertyRef Name="Query_Id" />
+    </Key>
+    <Property Name="Query_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Customer_PhoneNumber" Type="int" />
+    <Property Name="Customer_Email" Type="varchar" MaxLength="50" />
+    <Property Name="Customer_Query" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Deco_Details">
+    <Key>
+      <PropertyRef Name="Deco_Id" />
+    </Key>
+    <Property Name="Deco_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Deco_Item" Type="varchar" MaxLength="50" />
+    <Property Name="Deco_Price" Type="int" />
+    <Property Name="Deco_Select" Type="bit" />
+    <Property Name="Deco_Quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="Menu_Detail">
+    <Key>
+      <PropertyRef Name="Menu_Id" />
+    </Key>
+    <Property Name="Menu_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Menu_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Menu_Info" Type="varchar" MaxLength="50" />
+    <Property Name="Menu_Price" Type="int" />
+    <Property Name="Menu_Type" Type="varchar" MaxLength="50" />
+    <Property Name="Menu_Select" Type="bit" />
+  </EntityType>
+  <EntityType Name="Order_Details">
+    <Key>
+      <PropertyRef Name="Order_Id" />
+    </Key>
+    <Property Name="Order_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Venue_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Menu_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Deco_Item" Type="varchar" MaxLength="50" />
+    <Property Name="People" Type="int" />
+  </EntityType>
+  <EntityType Name="Venue_Detail">
+    <Key>
+      <PropertyRef Name="Venue_Id" />
+    </Key>
+    <Property Name="Venue_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Venue_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Venue_Capacity" Type="int" />
+    <Property Name="Venue_Address" Type="varchar" MaxLength="100" />
+    <Property Name="Venue_Type" Type="varchar" MaxLength="20" />
+    <Property Name="Venue_Price" Type="int" />
+    <Property Name="Venue_Select" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="Event_plan_ProjectModelStoreContainer">
+    <EntitySet Name="Customer_Info" EntityType="Self.Customer_Info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer_Query" EntityType="Self.Customer_Query" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Deco_Details" EntityType="Self.Deco_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu_Detail" EntityType="Self.Menu_Detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_Details" EntityType="Self.Order_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Venue_Detail" EntityType="Self.Venue_Detail" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

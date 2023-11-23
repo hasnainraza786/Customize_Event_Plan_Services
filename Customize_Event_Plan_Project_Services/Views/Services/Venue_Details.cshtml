@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Customize_Event_Plan_Project_Services.Models.Venue_Detail>
+
+@{
+    ViewBag.Title = "Venue_Details";
+}
+
+<h2>Venue_Details</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Venue_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Venue_Price)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Venue_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Venue_Price)
+        </td>
+        <td>
+            @Html.ActionLink("Show Details", "Venue_Select", new { id=item.Venue_Id }) |
+            
+        </td>
+    </tr>
+}
+
+</table>

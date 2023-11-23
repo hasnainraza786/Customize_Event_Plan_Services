@@ -1,0 +1,182 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustoPlanner | About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- custom js file link  -->
+    <script src="~/content/js/script.js"></script>
+    <link rel="stylesheet" href="~/content/index.css">
+    <link rel="stylesheet" href="~/Content/layout/styles/layout.css">
+</head>
+
+<body>
+    <!-- nav section starts -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4a4d4b ;">
+        <div class="container-fluid">
+            <a href="#" class="logo" style="color: yellow;">Custo<span style="color: white;">Planner</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="item-nav">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        &nbsp; &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link active" @Html.ActionLink("Home", "Home", "Home")</a>
+                        </li>
+                        &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("About", "About", "About")</a>
+                        </li>
+                        &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("Gallery", "Gallery", "Gallery")</a>
+                        </li>
+                        &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("Contact", "Contact", "Contact")</a>
+                        </li>
+                        &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("Services", "Main", "Services")></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+
+    <!-- nav section ends -->
+
+    <center>
+        <div class="home">
+            <br><br><br>
+            <div class="content center">
+                <h3>Its time to celebrate! the best <span> event organizers </span></h3>
+                <br>
+            </div>
+            <h3 style="color: wheat;">ADd your contnt in this bro</h3>
+            <br>
+        </div>
+    </center>
+
+
+    <div class="wrapper row2">
+        <section id="ctdetails" class="hoc container clear">
+            @using (Html.BeginForm("Customer_Info", "Services"))
+            {
+                <div class="sectiontitle">
+
+                    <h6 class="heading font-x2">PLAN YOUR EVENT WITH US</h6>
+                </div>
+                <article class="one_half">
+                    <h6 class="heading">BASIC INFORMATION</h6>
+
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend>Newsletter:</legend>
+                            <input type="text" value="" placeholder="Enter Name" name="Customer_Name">
+                            <input type="text" value="" placeholder="Enter Phone Number" name="Customer_Phone">
+                            <input type="text" value="" placeholder="Enter Email" name="Customer_Email">
+
+                           
+                            <button type="submit" value="submit">Submit</button>
+                        </fieldset>
+                    </form>
+                </article>
+
+            }
+            <!-- ################################################################################################ -->
+            <!-- ################################################################################################ -->
+        </section>
+    </div>
+
+
+
+
+
+
+    <!-- footer section starts -->
+
+    <section id="footer">
+        <div class="container">
+            <br><br>
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <br><br> <br><br> <br>
+                    <a href="#" class="logo" style="color: yellow;">
+                        Custo<span style="color: white;">Planner</span>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Quick links</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="./home.html"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                        <li><a href="./about.html"><i class="fa fa-angle-double-right"></i>About</a></li>
+                        <li><a href="./gallery.html"><i class="fa fa-angle-double-right"></i>Gallery</a></li>
+                        <li><a href="./event .html"><i class="fa fa-angle-double-right"></i>Event Planner</a></li>
+                        <li>
+                            <a href="./catering.html"><i class="fa fa-angle-double-right"></i>Catering Service</a>
+                        </li>
+                        <li>
+                            <a href="./photography.html">
+                                <i class="fa fa-angle-double-right"></i>Photography
+                                Service
+                            </a>
+                        </li>
+                        <li><a href="./contact.html"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Get In Touch With Us</h5>
+                    <p class="text-white">
+                        <img src="icons/location.png" alt=""><br>
+                        5TH Floor Haji Adam Chambers, Altaf Hussain Road,
+                        New Challi I.I Chundigarh , Karachi , Pakistan
+                    </p>
+                    <p class="text-white">
+                        <img src="icons/call.png" alt=""><br>+92 21 111 112 111 <br> (9am - 10pm ,
+                        Mon
+                        - Sat, Sunday 11am - 08pm)
+                    </p>
+                    <img src="icons/email.png" alt=""><br>
+                    <a href="mailto:eshop@dates.com" class="text-white text-decoration-none">
+                        <u>
+                            custoplanner@gmail.com
+                        </u>
+                    </a>
+                    <br><br>
+                    <img src="icons/facebook.png" alt="" width="8%">
+                    <img src="icons/whatsapp.png" alt="" width="8%">
+                    <img src="icons/twitter.png" alt="" width="8%">
+                </div>
+            </div>
+    </section>
+
+    <!-- footer section end  -->
+
+
+</body>
+
+</html>

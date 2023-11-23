@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Customize_Event_Plan_Project_Services.Models.Menu_Detail>
+
+@{
+    ViewBag.Title = "Menu";
+}
+
+<h2>Menu</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Menu_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Menu_Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Menu_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Menu_Price)
+        </td>
+        <td>
+            @Html.ActionLink("Show Details", "Menu_Select", new { id=item.Menu_Id }) |
+        </td>
+    </tr>
+}
+
+</table>

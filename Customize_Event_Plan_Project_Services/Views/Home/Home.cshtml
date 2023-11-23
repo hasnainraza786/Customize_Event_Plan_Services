@@ -1,0 +1,163 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustoPlanner | Customize Event Planner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <!-- custom js file link  -->
+    <script src="~/UI/js/script.js"></script>
+    <link rel="stylesheet" href="~/UI/css/home.css">
+</head>
+
+<body>
+    <!-- nav section starts -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4a4d4b ;">
+        <div class="container-fluid">
+            <a href="#" class="logo" style="color: yellow;">Custo<span style="color: white;">Planner</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="item-nav">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        &nbsp; &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("Home", "Home", "Home")</a>
+                        </li>
+                        &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("About", "About", "About")</a>
+                        </li>
+                        &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("Gallery", "Gallery", "Gallery")</a>
+                        </li>
+                        &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("Contact", "Contact", "Contact")</a>
+                        </li>
+                        &nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link"  @Html.ActionLink("Services", "Main", "Services")</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+
+    <!-- nav section ends -->
+
+
+    <center>
+        <div class="home">
+            <br><br><br>
+            <div class="content center">
+                <h3>Its time to celebrate! the best <span> event organizers </span></h3>
+                <br>
+            </div>
+            <br>
+
+            <!-- caurosel section starts -->
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/UI/images/caurosel2.jpg" class="d-block" data-bs-interval="100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/UI/images/caurosel1.jpg" class="d-block" data-bs-interval="100" alt="..">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/UI/images/caurosel4.jpg" class="d-block" data-bs-interval="100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/UI/images/caurosel3.jpg" class="d-block" data-bs-interval="100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/UI/images/g-6.jpg" class="d-block" data-bs-interval="100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- caurosel section ends -->
+
+    </center>
+    </div>
+
+    <!-- footer section starts -->
+
+    <section id="footer">
+        <div class="container">
+            <br><br>
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <br><br> <br><br> <br>
+                    <a href="#" class="logo" style="color: yellow;">Custo<span style="color: white;">Planner</span></a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Quick links</h5>
+                    <ul class="list-unstyled quick-links">
+
+                        <li><i class="fa fa-angle-double-right" style="color:yellow"></i>&nbsp; @Html.ActionLink("Home", "Home", "Home")</li>
+                        <li><i class="fa fa-angle-double-right" style="color:yellow"></i>&nbsp;  @Html.ActionLink("About", "About", "About")</li>
+                        <li><i class="fa fa-angle-double-right" style="color:yellow"></i>&nbsp; @Html.ActionLink("Gallery", "Gallery", "Gallery")</li>
+                        <li><i class="fa fa-angle-double-right" style="color:yellow"></i>&nbsp; @Html.ActionLink("Contact", "Contact", "Contact")</li>
+                        <li><i class="fa fa-angle-double-right" style="color:yellow"></i>&nbsp; @Html.ActionLink("Event Planner", "Contact", "Contact")</li>
+                        <li><i class="fa fa-angle-double-right" style="color:yellow"></i>&nbsp; @Html.ActionLink("Catering Service", "Contact", "Contact")</li>
+                        <li><i class="fa fa-angle-double-right" style="color:yellow"></i>&nbsp; @Html.ActionLink("Photography", "Contact", "Contact")</li>
+
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Get In Touch With Us</h5>
+                    <p class="text-white">
+                        <img src="~/UI/icons/location.png" width="8%"><br />
+                        5TH Floor Haji Adam Chambers, Altaf Hussain Road,
+                        New Challi I.I Chundigarh , Karachi , Pakistan
+                    </p>
+                    <p class="text-white">
+                        <img src="~/UI/icons/call.png" width="8%"><br>+92 21 111 112 111 <br> (9am - 10pm , Mon
+                        - Sat, Sunday 11am - 08pm)
+                    </p>
+                    <img src="~/UI/icons/email.png" width="8%"><br />
+                    <a style="text-decoration:none" href="mailto:eshop@dates.com"><u> custoplanner@gmail.com</u></a>
+                    <br><br>
+                    <img src="~/UI/icons/youtue.png" width="8%">
+                    <img src="~/UI/icons/twitter.png" width="8%">
+                    <img src="~/UI/icons/whatsapp.png" width="8%">
+                </div>
+            </div>
+    </section>
+
+    <!-- footer section end  -->
+
+
+
+
+</body>
+
+</html>
